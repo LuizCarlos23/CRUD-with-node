@@ -1,0 +1,15 @@
+body {
+	background-color: #efefefef;
+	padding-left: 25%;
+	padding-right: 25%;
+	text-align: center;
+}
+
+div.btnAction{
+	text-align: right;
+	padding-right: 10px;
+}
+
+h2 {
+	text-align: center;
+}

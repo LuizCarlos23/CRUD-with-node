@@ -1,0 +1,38 @@
+doctype html
+html
+	head
+		title My Page
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="/css/style.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+	body
+		div.row
+			
+			h2 Register
+			a(href="search")
+				button(class="waves-effect waves-teal btn-flat") Search
+			
+			form.col.s12.z-depth-3
+				br
+				div(class="input-field col s10")
+					label(for="name") Name
+					input(id="name" type="text")
+				div(class="input-field col s2")
+					label(for="age") Age
+					input(id="age" type="text")
+				div(class="input-field col s12")
+					label(for="rg") Rg
+					input(id="rg" type="text")
+					label(class="helper-text-rg red-text text-darken-2" ) 
+				div(class="input-field col s12")
+					label(for="cpf") CPF
+					input(id="cpf" type="text")
+					label(class="helper-text-cpf red-text text-darken-2" ) 
+				div.btnAction
+					label#message 
+					button(class="waves-effect waves-light btn-small" type="submit" ) Send
+				br
+		script(src="/javascript/register.js")
+			

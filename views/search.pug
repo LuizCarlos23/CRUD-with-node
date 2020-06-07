@@ -1,0 +1,75 @@
+doctype html
+html
+	head
+		title My Page
+		meta(charset="utf-8")
+		link(rel="stylesheet" href="/css/style.css")
+		link(rel="stylesheet" href="/css/search.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+	body
+		div.row
+			
+			h2 Search
+			a(href="register")
+				button(class="waves-effect waves-teal btn-flat") Register
+			
+			div(class="col s12 z-depth-3")
+				form.col.s12
+					label.radio
+						input(name="searchFor" onclick="alterLabel(this.id)" id="Name" type="radio" checked ) 
+						span Name
+
+					label.radio
+						input(name="searchFor" onclick="alterLabel(this.id)" id="Age" type="radio") 
+						span Age
+					
+					label.radio
+						input(name="searchFor" onclick="alterLabel(this.id)" id="RG" type="radio") 
+						span RG
+				
+					label.radio
+						input(name="searchFor" onclick="alterLabel(this.id)" id="CPF" type="radio") 
+						span CPF
+
+					label.radio
+						input(name="searchFor" onclick="alterLabel(this.id)" id="all" type="radio" ) 
+						span All
+
+					br
+					div(class="input-field col s10")
+						label(for="labelSearchValue") Name
+						input(id="searchValue" type="text")
+
+					div.btnSearch
+						button(class="waves-effect waves-light btn-small" ) Search
+					
+				div.table
+					table
+						thead
+							tr
+								th ID
+								th Name
+								th Age
+								th RG
+								th CPF
+						tbody
+					h3(id="msgError")
+			div(id="modalUser" class="modal")
+				div.modal-content
+					label#modal-userId
+					h5#modal-userName
+					hr 
+					h5#modal-userAge 
+					hr
+					h5#modal-userRg 
+					hr
+					h5#modal-userCpf 
+					hr
+
+				div.modal-footer
+					label(class="modal-close waves-effect waves-green btn-flat") Close
+					label(class="modal-deleteUser waves-effect waves-green btn-flat") Delete
+		script(src="/javascript/search.js")
+			
